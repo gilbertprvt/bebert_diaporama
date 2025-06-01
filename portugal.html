@@ -1,0 +1,59 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portugal</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  
+
+  <!-- Cadre principal avec image + curseurs + boutons -->
+  <div class="viewer">
+   <h1>Séjour au Portugal</h1> 
+  
+  <div id="titre-serie"></div>
+ <!--Modif photo -->
+<div class="image-container">
+      <img id="photo" src="images/portugal/Carte circuit.jpg" alt="Circuit Portugal">  
+  </div>
+
+    <div id="titre-audio" class="titre-audio"></div>
+
+
+    <!-- Curseurs -->
+    <div class="controls-global">
+      <div class="curseurs-container">
+        <div class="bloc-curseur">
+          <label for="vitesse">⏱️ Vitesse :</label>
+          <input type="range" id="vitesse" min="1" max="10" value="5" step="1">
+        </div>
+        <div class="bloc-curseur">
+          <label for="volume">🔉 Volume :</label>
+          <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+      </div>
+
+      <!-- Boutons -->
+
+      <div class="boutons">
+        <button onclick="startSlideshow()">▶️ Démarrer</button>
+        <button id="pauseBtn" onclick="togglePause()">⏸️ Pause</button>
+        <button onclick="restartSlideshow()">🔁 Retour</button>
+        <button onclick="toggleFullscreen()">⛶ Plein écran</button>
+        <button onclick="window.location.href='index.html'">🏠 Accueil</button>
+   
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Audio -->
+  <audio id="audio" controls style="display:none;"></audio>
+  
+
+  <!-- Script -->
+  <script src="portugal.js"></script>
+</body>
+</html>
