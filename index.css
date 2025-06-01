@@ -1,0 +1,169 @@
+/* ================== Fond de page ================== */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("images/fond1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ================== Arc SVG ================== */
+.arc-container {
+  padding-top: 3cm;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.svg-arc {
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+
+.svg-arc text {
+  font-size: 150px;
+  font-family: 'Dancing Script', 'Zapfino', cursive;
+}
+
+svg {
+  display: block;
+  margin: auto;
+}
+
+.letter {
+  font-family: 'Dancing Script', cursive;
+  font-size: 150px;
+  fill: #71c0e1;
+  font-weight: 900;
+  stroke: black;
+  stroke-width: 6px;
+  paint-order: stroke;
+}
+
+/* ================== Titre principal ================== */
+h1 {
+  font-family: 'Dancing Script', 'Zapfino', cursive;
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+/* ================== Bandeau texte défilant ================== */
+.texte {
+  background-image: url("images/bleu.jpg");
+  margin: 100px auto;
+  border: 3px solid #040108;
+  border-radius: 20px;
+  padding: 2px;
+  height: 75px;
+  width: 400px;
+  color: #000;
+  font-style: italic;
+  font-size: 50px;
+  font-family: 'Dancing Script', 'Zapfino', cursive;
+}
+
+/* ================== Boutons 3D ================== */
+.button-3d {
+  position: relative;
+  background-image: url("images/bleu.jpg");
+  color: black;
+  padding: 15px 30px;
+  font-family: 'Dancing Script', 'Zapfino', cursive;
+  font-size: 35px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0 #1861aa;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.button-3d:hover {
+  transform: scale(1.5);
+}
+
+.button-3d:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0 0 #d94c4c;
+}
+
+.button-3d:focus {
+  outline: none;
+  animation: bounce-back 0.3s ease-out;
+}
+
+@keyframes bounce-back {
+  0%   { transform: translate(6px, 6px); }
+  60%  { transform: translate(-2px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ================== Conteneur de boutons ================== */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.button-container button {
+  width: 200px;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .button-container button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* ================== Info-bulles ================== */
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+  padding: 14px 24px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+  color: #000;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  white-space: normal;
+  max-width: 400px;
+  min-width: 200px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.button-3d:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

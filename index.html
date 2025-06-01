@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue Photos</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Affichage du titre en arc avec SVG -->
+  <svg id="svg" viewBox="0 0 1000 400" width="1000" height="400">
+    <path id="arcPath" d="M 50,180 A 800,400 0 0,1 950,180" fill="none" stroke="transparent" />
+  </svg>
+
+  <!-- Bandeau défilant -->
+  <div class="texte">
+    <marquee direction="left" behavior="scroll" scrollamount="6">
+      🎥 .. DIAPORAMA .. 📷 
+    </marquee>
+  </div>
+
+  <!-- Conteneur principal de boutons -->
+  <div class="button-container">
+
+    <!-- Chaque bloc "element" est un bouton 3D avec une infobulle (tooltip) -->
+    <div class="element tooltip-container">
+      <a href="corse.html">
+        <button class="button-3d">Corse
+          <span class="tooltip">Tour de Corse<br>Septembre 2007<br>Calanques de Piana à Corte<br>Octobre 2019<br>Corte à Calvi</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="element tooltip-container">
+      <a href="occitanie.html">
+        <button class="button-3d">Occitanie
+          <span class="tooltip">Du Nord au Sud<br>d'Est en Ouest<br>Villes et Villages d'Occitanie</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="element tooltip-container">
+      <a href="versailles.html">
+        <button class="button-3d">Versailles
+          <span class="tooltip">Visite Château de Versailles<br>Mai 2016<br>Le Château<br>Les Jardins<br>Le Grand Trianon<br>Le Petit Trianon</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="element tooltip-container">
+      <a href="seville.html">
+        <button class="button-3d">Séville
+          <span class="tooltip">Avril 2019<br>Séjour à Séville<br>Visite de la ville durant les fêtes Pascales</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="element tooltip-container">
+      <a href="portugal.html">
+        <button class="button-3d">Portugal
+          <span class="tooltip">Juin 2017<br>Séjour au Portugal</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="element tooltip-container">
+      <a href="bretagne.html">
+        <button class="button-3d">Bretagne
+          <span class="tooltip">Golfe du Morbihan</span>
+        </button>
+      </a>
+    </div>
+
+ 
+    <div class="element tooltip-container">
+      <a href="couseran.html">
+        <button class="button-3d">Couseran
+          <span class="tooltip">"Autrefois le Couserans"<br>Grande fête traditionnelle à Saint-Girons (Ariège)<br>Savoir-faire du Couserans avec costumes, danses, musiques et métiers d'autrefois</span>
+        </button>
+      </a>
+    </div>
+
+    <!-- Boutons en construction suite-->
+
+
+
+  </div>
+
+  <!-- Script pour afficher le texte en arc -->
+  <script src="index.js"></script>
+</body>
+</html>
