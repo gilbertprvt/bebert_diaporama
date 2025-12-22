@@ -52,10 +52,10 @@ const images = [
 
 // Liste des musiques
 const playlist = [
-  "audio/Bourrée d'Ariège.mp3",
+ 
   "audio/Danse Pas de 4.mp3",
   "audio/Une maraîchine.mp3",
- 
+  "audio/Bourrée d'Ariège.mp3",
 
 ];
 
